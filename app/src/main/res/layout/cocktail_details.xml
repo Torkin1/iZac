@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="view.DrinkDetailsActivity"
+    style="@style/ActivityBackground">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:fillViewport="true"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvCocktailName"
+                style="@style/TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:text="@string/browsedrinks_drinkitem_title"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/ivCocktailPreview"
+                style="@style/NotClickable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="8dp"
+                android:contentDescription="@string/drinkdetails_preview"
+                android:src="@drawable/preview"
+                app:layout_constraintEnd_toEndOf="@+id/tvCocktailName"
+                app:layout_constraintStart_toStartOf="@+id/tvCocktailName"
+                app:layout_constraintTop_toBottomOf="@+id/tvCocktailName"
+                app:srcCompat="@drawable/icons8_cocktail_64" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutIngredients"
+                    android:orientation="vertical"
+                    style="@style/NotClickable"
+                    android:layout_width="match_parent"
+                    android:layout_height="345dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="33dp"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintEnd_toEndOf="@+id/ivCocktailPreview"
+                    app:layout_constraintStart_toStartOf="@+id/ivCocktailPreview"
+                    app:layout_constraintTop_toBottomOf="@+id/ivCocktailPreview">
+
+                    <TextView
+                        style="@style/TextViewBorderLess"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/drinkdetails_tingredients_title"
+                        android:textSize="14sp" />
+
+                    <androidx.core.widget.NestedScrollView
+                        android:id="@+id/nestedScrollView3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TableLayout
+                            android:id="@+id/tIngredients"
+                            style="@style/NotClickableBorderless"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="24dp"></TableLayout>
+                    </androidx.core.widget.NestedScrollView>
+                </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                style="@style/NotClickable"
+                android:layout_width="match_parent"
+                android:layout_height="345dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="@+id/linearLayout2"
+                app:layout_constraintStart_toStartOf="@+id/linearLayout2"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+                <TextView
+                    style="@style/TextViewBorderLess"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/perks"
+                    android:textSize="14sp" />
+
+                <androidx.core.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TableLayout
+                        android:id="@+id/tPerks"
+                        style="@style/NotClickableBorderless"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="24dp" />
+
+                </androidx.core.widget.NestedScrollView>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                style="@style/NotClickable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:orientation="vertical"
+                android:padding="24dp"
+                app:layout_constraintEnd_toEndOf="@+id/linearLayoutIngredients"
+                app:layout_constraintStart_toStartOf="@+id/linearLayoutIngredients"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayoutIngredients">
+
+                <TextView
+                    android:id="@+id/tvRecipeTitle"
+                    style="@style/TextViewBorderLess"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/drinkdetails_trecipe_title"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <View
+                    android:id="@+id/divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="?android:attr/listDivider" />
+
+                <androidx.core.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="115dp">
+
+                    <TextView
+                        android:id="@+id/tvRecipe"
+                        style="@style/TextViewBorderLess"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/cocktail_recipe"
+                        android:textAlignment="center"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvRecipeTitle" />
+                </androidx.core.widget.NestedScrollView>
+
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/ibStar"
+                android:layout_width="78dp"
+                android:layout_height="65dp"
+                android:layout_marginStart="77dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="77dp"
+                android:layout_marginBottom="16dp"
+                android:backgroundTint="@color/colorAccent"
+                android:contentDescription="@string/star"
+                android:padding="16dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/icons8_star_filled_100"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:foreground="?android:attr/selectableItemBackground">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        style="@style/Clickable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ivCocktailPreview"
+            style="@style/NotClickable"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:contentDescription="@string/drinkdetails_preview"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/icons8_cocktail_64" />
+
+
+        <TextView
+            android:id="@+id/tvCocktailName"
+            style="@style/TextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="9dp"
+            android:layout_marginEnd="32dp"
+            android:text="@string/browsedrinks_drinkitem_title"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/ivCocktailPreview"
+            app:layout_constraintTop_toTopOf="@+id/ivCocktailPreview" />
+
+        <TextView
+            android:id="@+id/tvNumOfIngredients"
+            style="@style/TextViewLessImportant"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="36dp"
+            android:text="@string/browsedrinks_drinkitem_subtitle"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="@+id/tvCocktailName"
+            app:layout_constraintStart_toStartOf="@+id/tvCocktailName"
+            app:layout_constraintTop_toBottomOf="@+id/tvCocktailName" />
+
+        <ImageView
+            android:id="@+id/ivAlcoholic"
+            android:layout_width="44dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="42dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/tvCocktailName"
+            app:layout_constraintTop_toBottomOf="@+id/tvNumOfIngredients"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="@drawable/icons8_wine_glass_100" />
+
+        <ImageView
+            android:id="@+id/ivStarred"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/tvCocktailName"
+            app:layout_constraintTop_toBottomOf="@+id/tvNumOfIngredients"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="@drawable/icons8_star_filled_100_1_" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

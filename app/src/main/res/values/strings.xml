@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">iZac</string>
+    <string name="mainmenu_subtitle">\"The Usual?\"</string>
+    <string name="mainmenu_brandom_text">Random</string>
+    <string name="mainmenu_bstarred_text">Starred</string>
+    <string name="mainmenu_bbrowse_text">Browse</string>
+    <string name="browsedrinks_drinkitem_title">Awesome Cocktail Name</string>
+    <string name="browsedrinks_drinkitem_subtitle">%d ingredients</string>
+    <string name="browsedrinks_search_hint">Filter by ingredient or by name ...</string>
+    <string name="drinkdetails_trecipe_title">How it\'s made:</string>
+    <string name="drinkdetails_tingredients_title">What you need:</string>
+    <string name="drinkdetails_preview">Cocktail preview</string>
+    <string name="launcher_icon">launcher icon</string>
+    <string name="barman">barman</string>
+    <string name="cocktail_recipe">A very long description about making a cocktail starting with the single ingredients. This could be a quite long text, so it can expand the TextView which contains it.\nServe cold</string>
+    <string name="perks">Perks:</string>
+    <string name="star">Star</string>
+    <string name="ingredient">Ingredient</string>
+    <string name="perk">perk</string>
+    <string name="unimplemented_feature_title">Coming Soon!</string>
+    <string name="unimplemented_feature_msg">This feature has not been implemented yet</string>
+    <string name="OK">OK</string>
+    <string name="non_alcoholic">Non alcoholic</string>
+    <string name="preview">/preview</string>
+    <string name="not_available">N/A</string>
+    <string name="KEY_ALL_DRINKS">allDrinks</string>
+    <string name="DRINK_SELECTED_KEY">drinkSelected</string>
+    <string name="DRINK_THUMB_KEY">drinkThumb</string>
+    <string name="Toast_wait_server">Waiting for server response ...</string>
+    <string name="KEY_CURRENT_LETTER">currentLetter</string>
+    <string name="KEY_END_LETTER">endLetter</string>
+    <string name="browseDrinks_whatDrinks">whatDrinks</string>
+    <string name="browseDrinks_allDrinks">allDrinks</string>
+    <string name="Toast_OnDrinkStarred">Drink starred succesfully!</string>
+    <string name="Toast_OnDrinkUnstarred">Drink removed from starred drinks</string>
+</resources>
